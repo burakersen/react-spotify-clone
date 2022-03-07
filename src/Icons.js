@@ -1,8 +1,8 @@
 import React from "react";
 
-const Svg = ({ children, className, size=24 }) => {
+const Svg = ({ children, className, sizex=24, sizey=24 }) => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${size} ${size}`} className={`fill-current ${className}`}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${sizex} ${sizey}`} className={`fill-current ${className}`}>
             {children}
         </svg>
     )
@@ -34,7 +34,7 @@ export const CollectionIcon = ({ className }) => {
 
 export const PlusIcon = ({ className }) => {
     return (
-        <Svg className={className} size="16">
+        <Svg className={className} sizex="16" sizey="16">
             <path d="M15.25 8a.75.75 0 01-.75.75H8.75v5.75a.75.75 0 01-1.5 0V8.75H1.5a.75.75 0 010-1.5h5.75V1.5a.75.75 0 011.5 0v5.75h5.75a.75.75 0 01.75.75z" />
         </Svg>
     )
@@ -42,7 +42,7 @@ export const PlusIcon = ({ className }) => {
 
 export const HeartIcon = ({ className }) => {
     return (
-        <Svg className={className} size="16">
+        <Svg className={className} sizex="16" sizey="16">
             <path d="M15.724 4.22A4.313 4.313 0 0012.192.814a4.269 4.269 0 00-3.622 1.13.837.837 0 01-1.14 0 4.272 4.272 0 00-6.21 5.855l5.916 7.05a1.128 1.128 0 001.727 0l5.916-7.05a4.228 4.228 0 00.945-3.577z" />
         </Svg>
     )
@@ -56,6 +56,60 @@ export const DownloadIcon = ({ className }) => {
         </Svg>
     )
 }
+
+export const PrevIcon = ({ className }) => {
+    return (
+        <Svg className={className}>
+            <path d="M15.957 2.793a1 1 0 010 1.414L8.164 12l7.793 7.793a1 1 0 11-1.414 1.414L5.336 12l9.207-9.207a1 1 0 011.414 0z" />
+        </Svg>
+    )
+}
+
+export const NextIcon = ({ className }) => {
+    return (
+        <Svg className={className}>
+           <path d="M8.043 2.793a1 1 0 000 1.414L15.836 12l-7.793 7.793a1 1 0 101.414 1.414L18.664 12 9.457 2.793a1 1 0 00-1.414 0z" />
+        </Svg>
+    )
+}
+
+export const AvatarIcon = ({ className }) => {
+    return (
+        <Svg className={className} sizex="18" sizey="20">
+            <path d="M15.216 13.717L12 11.869C11.823 11.768 11.772 11.607 11.757 11.521C11.742 11.435 11.737 11.267 11.869 11.111L13.18 9.57401C14.031 8.58001 14.5 7.31101 14.5 6.00001V5.50001C14.5 3.98501 13.866 2.52301 12.761 1.48601C11.64 0.435011 10.173 -0.0879888 8.636 0.0110112C5.756 0.198011 3.501 2.68401 3.501 5.67101V6.00001C3.501 7.31101 3.97 8.58001 4.82 9.57401L6.131 11.111C6.264 11.266 6.258 11.434 6.243 11.521C6.228 11.607 6.177 11.768 5.999 11.869L2.786 13.716C1.067 14.692 0 16.526 0 18.501V20H1V18.501C1 16.885 1.874 15.385 3.283 14.584L6.498 12.736C6.886 12.513 7.152 12.132 7.228 11.691C7.304 11.251 7.182 10.802 6.891 10.462L5.579 8.92501C4.883 8.11101 4.499 7.07201 4.499 6.00001V5.67101C4.499 3.21001 6.344 1.16201 8.699 1.00901C9.961 0.928011 11.159 1.35601 12.076 2.21501C12.994 3.07601 13.5 4.24301 13.5 5.50001V6.00001C13.5 7.07201 13.117 8.11101 12.42 8.92501L11.109 10.462C10.819 10.803 10.696 11.251 10.772 11.691C10.849 12.132 11.115 12.513 11.503 12.736L14.721 14.585C16.127 15.384 17.001 16.884 17.001 18.501V20H18.001V18.501C18 16.526 16.932 14.692 15.216 13.717Z" />
+        </Svg>
+    )
+}
+
+export const DownDirIcon = ({ className }) => {
+    return (
+        <Svg className={className} sizex="16" sizey="16">
+            <path d="M14 6l-6 6-6-6h12z"></path>
+        </Svg>
+    )
+}
+
+export const ExternalIcon = ({ className }) => {
+    return (
+        <Svg className={className} sizex="16" sizey="16">
+            <path d="M1 2.75A.75.75 0 011.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 01-.75.75H1.75a.75.75 0 01-.75-.75V2.75z" />
+            <path d="M15 1v4.993a.75.75 0 11-1.5 0V3.56L8.78 8.28a.75.75 0 01-1.06-1.06l4.72-4.72h-2.433a.75.75 0 010-1.5H15z" />
+        </Svg>
+    )
+}
+
+export const PlayIcon = ({ className }) => {
+    return (
+        <Svg className={className}>
+            <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+        </Svg>
+    )
+}
+
+
+
+
+
 
 
 

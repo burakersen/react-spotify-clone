@@ -7,13 +7,15 @@ import Search from 'views/Search'
 
 const Content = () => {
   return (
-    <main className="flex-1">
+    <main className="flex-auto overflow-auto">
       <Navbar />
-      <Routes>
-        <Route path="/" exact element={<Home />}></Route>
-        <Route path="/search" element={<Search />}></Route>
-        <Route path="/collection" element={<Collection />}></Route>
-      </Routes>
+      <div className="px-8 py-4">
+        <Routes>
+          <Route path="/" exact element={<Home />}></Route>
+          <Route path="/search" element={<Search />}></Route>
+          <Route path="/collection" element={<Collection />}></Route>
+        </Routes>
+      </div>
     </main>
   )
 }
